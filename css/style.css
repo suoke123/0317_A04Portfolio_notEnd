@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+/* Reset */
+* {
+    color: #333;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body            {    background-color: #fff;    }
+a                 {    text-decoration: none;    }
+a:link           {    color: #222;    }
+a:visited       {    color: #222;    }
+a:hover        {    color: #222;    }
+a:active        {    color: #222;    }
+img             {    vertical-align: middle;    }
+ul                {    list-style: none;    }
+/* Reset */
+
+/* 가이드라인 시작 */
+div#wrap {border: 1px solid #000;}
+/*#wrap>* {border: 1px solid #000; margin: 1px;}*/
+/*#header>div#headerLogo {border: 1px solid #000;}*/
+/*#header>nav#gnb {border: 1px solid #f00;}*/
+#contents>div {border: 1px solid #f80;}
+/* 가이드라인 끝 */
+
+/* div#wrap 시작 */
+div#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+/* div#wrap 끝 */
+
+/* header#header 시작 */
+header#header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+#header>div#headerLogo {
+    width: 220px;
+    height: 100px;
+    text-align: center;
+    line-height: 90px;
+}
+
+    /* nav#gnb */
+#header>nav#gnb {
+    width: 620px;
+}
+#header ul#mainMenu {
+    margin-top: 54px;
+/*    border: 1px solid #00f;*/
+    display: inline-block;
+}
+#header ul#mainMenu::after {
+    content: "";
+    height: 40px;
+    display: inline-block;
+}
+#header>#gnb li.mainLi {
+    float: left;
+}
+#header>#gnb a {
+    width: 150px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgba(67, 155, 18, 0.6);
+    display: inline-block;
+}
+#header>#gnb li.mainLi:not(:first-child)>a {
+    border-left: none;
+}
+#header>#gnb li.mainLi>a:hover {
+    color: #0066ad;
+    background-color: rgba(67, 155, 18, 0.6);
+}
+#header>#gnb ul.subMenu {
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+#header>#gnb ul.subMenu a {
+    border: 1px solid rgba(67, 155, 18, 0.0);
+}
+#header>#gnb ul.subMenu a:hover {
+    color: #0066ad;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+    /* nav#gnb */
+
+/* header#header 끝 */
+
+/* div#subMenuBG 시작 */
+div#subMenuBG  {
+    position: relative;
+    top: -4px;
+    display: none;
+}
+div#subMenuLayout {
+    width: 100%;
+    height: 140px;
+    background-color: rgba(67, 155, 18, 0.6);
+    position: absolute;
+}
+/* div#subMenuBG 끝 */
+
+/* div#slide 시작 */
+div#slide {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+#slide a {
+    position: absolute;
+}
+#slide a:not(:first-child) {
+    display: none;
+}
+#slide span {
+    padding: 20px;
+    color: #0066ad;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(67, 155, 18);
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+/* div#slide 끝 */
+
+/* div#contents 시작 */
+div#contents {
+    height: 200px;
+    display: flex;
+}
+#contents>div {
+    width: 400px;
+    padding: 10px;
+}
+
+    /* 싱글탭 공통사항 */
+div#contents>div.singleTab>button {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 4px 14px;
+    border: 1px solid #aaa;
+    border-bottom: none;
+    position: relative;
+    left: 40px;
+    top: 1px;
+}
+div#contents>div.singleTab>div.tabContent {
+    padding: 10px;
+    border: 1px solid #aaa;
+}
+    /* 싱글탭 공통사항 */
+
+    /* div#notice 시작 */
+#contents #notice #noticeTabBtn {
+    background-color: #fff;
+}
+#contents #notice span {
+    font-size: 14px;
+    line-height: 28px;
+    display: inline-block;
+}
+#contents #notice span.subject {
+    width: 269px;
+}
+#contents #notice span.regDate {
+    width: 80px;
+    text-align: right;
+}
+    /* div#notice 끝 */
+
+    /* div#gallery 시작 */
+#contents #gallery #galleryTabContent {
+    text-align: center;
+}
+#contents #gallery #galleryTabBtn {
+    border: 1px solid #aaa;
+}
+#contents #gallery img:hover {
+    opacity: 0.6;
+}
+    /* div#gallery 끝 */
+
+/* div#contents 끝 */
+
+/* 레이어 팝업 시작 */
+
+    /* div#contents 커서 시작 */
+div#contents span.layerPopupPoint {
+    cursor: pointer;
+}
+    /* div#contents 커서 끝 */
+
+    /* div#layerPopupBG 시작 */
+div#layerPopupBG {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+#layerPopupBG>div#layerPopup {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+    /* div#layerPopupBG 끝 */
+/* 레이어 팝업 끝 */
